@@ -1,0 +1,712 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+    font-family: cairo;
+    transition: .5s linear;
+} 
+      /* start header */
+:root {
+  --color-text: #fff;
+  --backgroun-button: #6370FF;
+  --color-button: #000;
+  --color-hover-button: #6370FF;
+  --hover-button: #fff;
+  --color-icon: #6370FF;
+  --padding-button: .2rem .4rem;
+    --border1-button: 1px solid #6370FF;
+    
+      --hover1-border-button: 1px solid #6370FF;
+
+  --border-button: 1px solid #000;
+  --hover-border-button: 1px solid #6370FF;
+  
+  --background-before: #6370FF;
+  --background-ul: #929292;
+}
+s {
+  font-weight: bold;
+}
+header {
+  height: 10vw;
+  width: 100vw;
+  background: #eee;
+  position: sticky;
+  top: 0%;
+  left: 0;
+  z-index: 2;
+      box-shadow: 0px -1px 3px #000;
+}
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+  height: 10vw;
+    transition: .5s ease-in-out;
+}
+header nav ul {
+  list-style: none;
+  position: fixed;
+  top: 10vw;
+  background: #eee;
+  height: 49%;
+  width: 80vw;
+  display: none;
+  transition: all .5 .5 linear;
+}
+#check:checked ~ ul {
+  display: inline-block;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: var(--color-button);
+  
+  display: block;
+  text-transform: capitalize;
+  padding: .5rem 0rem;
+ padding-left: .5rem;
+ transition: .5s;
+ font-family: Cairo;
+}
+header nav ul li a:hover {
+  padding-left: 1rem;
+    color: #6370FF;
+
+}
+header nav img {
+  width: 5vw;
+}
+header nav h2 {
+  font-size: 5vw;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+header nav h2 img {
+  margin-right: .5vw;
+}
+header nav .bar {
+  width: 7vw;
+  height: 14px;
+  cursor: pointer;
+  position: relative;
+}
+header nav .bar span {
+  background-color: var(  --background-before);
+  height: 1vw;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  transition: all .4s linear;
+}
+header nav .bar span:first-child {
+top: 0;
+}
+header nav .bar span:nth-child(2){
+  top:6px;
+}
+header nav .bar span:last-child {
+  top: 12px;
+}
+#check {
+  display: none;
+}
+.bar:hover span:first-child,
+.bar:hover span:last-child {
+  top: 6px;
+
+}
+.bar:hover span:nth-child(2){
+  opacity: 0;
+
+}
+
+      /* end header */
+    /* start section */
+
+section {
+ 
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+}
+section::before {
+  content: "";
+  position: absolute;
+  top: -20vw;
+  right: -35vw;
+  width: 70vw;
+  height: 90vw;
+  background: var(--background-before);
+  transform: rotate(-60deg);
+  border-top-left-radius: 50%;
+  z-index: -1;
+  opacity: .8;
+}
+
+      /* end section */
+    /* start section1 */
+
+section .section1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 40vh;
+  width: 80%;
+  margin: auto;
+      position: relative;
+      background: none;
+}
+section .section1 .img-section  img{
+  width: 30vw;
+    animation: img 2s infinite alternate
+    linear;
+  position: absolute;
+  right: 0;
+}
+@keyframes img {
+  to {
+    top: 10%;
+  }
+  from {
+    top: 5%;
+  }
+}
+section .section1 .text-section
+ {
+  max-width: 50%;
+  text-align: center;
+}
+section .section1 .text-section
+h2 {
+  font-size: 5vw;
+  margin-bottom: 1vw;
+}
+section .section1 .text-section
+p {
+  font-weight: 100;
+}
+section .section1 .text-section
+a {
+  text-decoration: none;
+  padding: var(--padding-button);
+  border: var(--border-button);
+  color: var(--color-button);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 1vw;
+  transition: .5s;
+  box-shadow: 2px 6px 10px #eee;
+}
+section .section1 .text-section
+a:hover {
+  background: var(--hover-button);
+  border: var(--hover-border-button);
+  color: var(--color-hover-button);
+}
+section .section1 .text-section
+a img {
+  width: 20%;
+}
+
+        /* end section1 */
+      /* start section2 */
+
+section .section2 {
+  height: 80vh;
+  width: 80%;
+  margin: auto;
+  background: none;
+  position: relative;
+  margin-top:1rem;
+}
+section .section2 .img-section2  img{
+  width: 100%;
+}
+section .section2 .text-section2 h2{
+    font-size: 5vw;
+  margin-bottom: 1vw;
+}
+section .section2 .text-section2 p{
+    font-weight: 100;
+    line-height: 1.5;
+}
+section .section2 .text-section2 a {
+  display: inline-block;
+  text-decoration: none;
+  padding: .5rem;
+  background: var(--backgroun-button);
+  border: 1px solid #6370FF;
+  border-radius: 20px;
+  margin-top: .3rem;
+  color: #fff;
+  transition: .5s;
+  font-family: cairo;
+    box-shadow: 2px 2px 10px #eee;
+}
+section .section2 .text-section2 i {
+  color: var(--color-icon);
+  margin-right: .5rem;
+}
+section .section2 .text-section2 a span {
+    position: relative;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#2196f3);
+}
+section .section2 .text-section2 a span:nth-child(1) {
+    position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent,#000);
+}
+section .section2 .text-section2 a span:hover span:nth-child(1) {
+  left: 100%;
+  transition: .5s;
+}
+section .section2 .text-section2 a:hover {
+  color: #6370FF;
+  background: #fff;
+    border: 1px solid #6370FF;
+}
+section .section2 span {
+  position: absolute;
+  width: 90vw;
+  height: 90vw;
+  background: #BBC1FE75;
+  border-radius: 50px;
+  left: -80%;
+  top: -5%;
+  transform: rotate(-70deg);
+  z-index: -1;
+}
+section .section2 .center {
+  position: absolute;
+  width: 40vw;
+  height: 40vw;
+  background: #BBC1FE75;
+  border-radius: 40px;
+  top: 70%;
+  left: 24%;
+transform: rotate(-70deg);
+  z-index: -1;
+  animation: center infinite 10s alternate;
+}
+section .section2 .right {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  background: #BBC1FE75;
+  border-radius: 20px;
+  top: 50%;
+  left: 80%;
+transform: rotate(-70deg);
+  z-index: -1;
+  animation: right infinite 15s alternate;
+}
+@keyframes center {
+  to {
+      top: 45%;
+    transform: rotate(180deg)
+  }
+  form {
+      top: 60%;
+        transform: rotate(-360deg)
+
+  }
+}
+@keyframes right {
+  to {
+    transform: rotate(180deg);
+      top: 40%;
+  }
+  form {
+      top: 60%;
+        transform: rotate(180deg)
+
+  }
+}
+
+        /* end section2 */
+      /* start section3 */
+
+section .section3 {
+    height: 40vh;
+  width: 80%;
+  margin: auto;
+  background: none;
+  position: relative;
+  margin-top:4rem;
+  text-align: center;
+}
+section .section3 h2 {
+  text-align: center;
+    margin-bottom: 1rem;
+    font-size: 5vw;
+    transition: .5s;
+}
+section .section3 h2:hover {
+    letter-spacing: 2px;
+
+}
+section .section3 p {
+  margin-bottom: 1rem;
+  font-weight: 100;
+}
+section .section3 .img-section3
+img {
+  width: 2rem;
+  height: 2rem;
+}
+section .section3 .display
+{
+  display: flex;
+  align-items: center;
+  text-align: center ;
+}
+section .section3 .img-section3
+h3 {
+  font-size: 2vw;
+  transition: .5s;
+}
+section .section3 .img-section3
+h3:hover {
+    letter-spacing: 2px;
+
+}
+section .section3 .img-section3
+p { 
+    font-size: .1rem;
+    max-width: 90%;
+}
+section .section3 .img-section3
+.p {
+  text-align: center;
+      max-width: 90%;
+margin: auto;
+}
+
+        /* end section3 */
+      /* start section4 */
+
+section .section4 {
+  background: var(--background-before);
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  margin-top: 7rem;
+}
+section .section4 img {
+  width: 3rem;
+}
+section .section4 h2 {
+  color: #fff;
+} 
+section .section4 .text-section4 {
+  position: absolute;
+  width: 80%;
+  height: 50vw;
+  background: var(--background-before); 
+  margin: auto;
+  bottom: -8.5rem;
+    box-shadow: 0px -.5px 2.5px  #000;
+    padding: 0rem .4rem;
+}
+section .section4 .numbers {
+font-size: 3vw;
+margin: auto;
+padding: 1.5rem;
+}
+section .section4 .text-section4 .number1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-bottom: 1rem;
+} 
+section .section4 .text-section4 .number2 {
+    display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding-top: 2rem;
+}
+section .section4 .text-section4 .number2 span p{
+  font-weight: 500;
+  color: #fff;
+}
+
+        /* end section4 */
+        /* start main */
+
+main {
+ margin-top: 6.5rem;
+ height: 230vh;
+text-align: center;
+margin-top: 10rem;
+}
+main .section5 {
+  width: 80%;
+  margin: auto;
+}
+main .section5 h2 {
+  margin-bottom: .4rem;
+}
+main .section5 p {
+    font-weight: 100;
+}
+main .section5 .text-section5 {
+  width: 300px;
+  height: 450px;
+  background: #fff;
+  color: #000;
+    box-shadow: 0px 0px 10px 1px  #eee;
+    margin-top: 1rem;
+    position: relative;
+      z-index: 100;
+  transition: linear .5s;
+}
+main .section5 .text-section5:hover {
+      box-shadow: 0px 0px 10px 1px  var(--backgroun-button);
+
+}
+main .section5 .text-section5 h6{
+  text-transform: capitalize;
+  letter-spacing: 5px;
+  margin: 1rem;
+  padding-top: 1rem;
+  font-size: 1rem;
+}
+main .section5 .text-section5 p {
+  margin-bottom: 1rem;
+  font-weight: 100;
+}
+main .section5 .text-section5 p.sell{
+  color: var(--backgroun-button);
+  font-weight: 700;
+    font-size: 2rem;
+}
+main .section5 .text-section5 a
+{
+  display: inline-block;
+  text-decoration: none;
+    background: var(--backgroun-button);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: .2rem;
+  color: #fff;
+  transition: .5s;
+}
+main .section5 .text-section5 a:hover {
+background: #000; 
+}
+main .section5 .text-section5 span {
+  position: absolute;
+  top: 3%;
+  background: var(--backgroun-button);
+  border-radius: 30%;
+  width: 80px;
+  height: 80px;
+  animation:span 15s linear infinite alternate;
+  transform: rotate(130deg);
+    opacity: .5;
+  z-index: -1;
+}
+@keyframes span {
+  to {
+    top: 80%;
+      transform: rotate(130deg);
+  }
+  from {
+    bottom: 0;
+      transform: rotate(-130deg);
+
+  }
+}
+@keyframes span1 {
+  to {
+    top: 80%;
+      transform: rotate(130deg);
+  }
+  from {
+    bottom: 0;
+      transform: rotate(-130deg);
+
+  }
+}
+main .section5 .text-section5 .span1 {
+  top: 10px;
+    animation:span1 13s linear infinite alternate;
+
+}
+main .section5 .text-section5 .span2 {
+  top: 100px;
+  left: 150px;
+  width: 50px;
+  height: 50px;
+}
+main .section5 .text-section5 .span3 {
+  top: 20px;
+  left: 60px;
+    animation:span1 13s linear infinite alternate;
+
+}
+main .section5 .text-section5
+ .span4 {
+  top: 80px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+      /* end main*/
+    /* start slider */
+    
+.slider {
+width: 100%;
+background: var(--color-icon);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+    color: #fff;
+  
+}
+.slider .slid {
+  height: 40vh;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  }
+   .slider .slid p {
+     font-weight: 100;
+     margin-top: 1rem;
+   }
+  .slider .slid a {
+    text-decoration: none;
+    padding: var(--padding-button);
+    background: #fff;
+    color: var(--backgroun-button);
+    display: inline-block;
+    align-items: center;
+    border-radius: 5%;
+    transition: .5s linear;
+  }
+   .slider .slid a:hover {
+     color: #000;
+   }
+   .slider .slid .a {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     margin-top: 3rem;
+   }
+ .slider .slid a i {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+ }
+ 
+/* end slider */
+/* start contact */
+
+section .contact {
+  height: 100vh;
+  width: 100%;
+  background: #fff;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 4rem;
+ position: relative;
+}
+section .contact .contact-us {
+  height: 80%;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px  #eee;
+  z-index: 5;
+  
+ border-radius: 5px; 
+}
+section .contact .contact-us p {
+  font-size: .5rem;
+}
+section .contact .contact-us p i {
+  padding: .5rem;
+  border: 1px solid #000;
+  border-radius: 50%;
+  font-size: .5rem;
+  margin-right: .2rem;
+margin-top: .3rem;
+}
+section .contact .contact-us input,
+textarea {
+  margin-top: 1rem;
+  padding-left: .5rem;
+  transition: .5s linear;
+  border: 1px solid #000;
+}
+  section .contact .contact-us input:hover {
+    border: 1px solid var(--backgroun-button);
+  }
+  section .contact .contact-us textarea:hover {
+    border: 1px solid var(--backgroun-button);
+  }
+section .contact .contact-us a {
+  padding: 1rem;
+  text-decoration: none;
+  background: #000;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 10px;
+transition: .5s linear;
+display: inline-block;
+  margin-top: .3rem;
+}
+section .contact .contact-us a:hover {
+
+  background: var(--backgroun-button); 
+}
+section footer {
+  height: 65vh;
+  width: 100%;
+  background: #000;
+  text-align: center;
+  color: #fff;
+ position: absolute; 
+  bottom: -2%;
+  padding-top: 17.5rem;
+ z-index: 4;
+}
+footer .img-icon i {
+  color: #fff;
+  padding: .5rem;
+  border: 2px solid #fff;
+  border-radius:50%; 
+  transition: .5s linear;
+  margin-top: 1rem;
+margin-right: .5rem;
+}
+footer .img-icon i:hover {
+    border: 2px solid var(--backgroun-button);
+  background: var(--backgroun-button);
+  
+}
